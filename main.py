@@ -228,7 +228,7 @@ if __name__ == "__main__":
     pipeline_image.cuda()
     image_paths = ["./test_200_new/1/1_1.png", "./test_200_new/1/1_2.png", "./test_200_new/1/1_3.png"]
     run_multi_image_task(pipeline_image, image_paths, "results/multi-image/1")
-    run_single_image_task(pipeline_image, image_paths[0], "results/single-image/1")
+    run_single_image_task(pipeline_image, image_paths[2], "results/single-image/1")
 
     
     pipeline_text = TrellisTextTo3DPipeline.from_pretrained(
