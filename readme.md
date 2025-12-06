@@ -77,18 +77,17 @@ run_text_task(pipeline_text, prompt, "results/text/1")
 
 ---
 
----
 
 ## Evaluation
 
 To evaluate the generated meshes, you need to set up the following environment:
 
 1. **Dependencies**
-   - [MuJoCo](https://mujoco.org/) for physics simulation (if needed for physical metrics)
-   - [Blender](https://www.blender.org/) and `bpy` for mesh rendering and processing
+   - [MuJoCo](https://mujoco.org/) for physics simulation 
+   - [Blender](https://www.blender.org/) and `bpy` for mesh rendering
 
 2. **Evaluation Code**
-   - The evaluation scripts are provided in the `evaluation` folder.
+   - The evaluation scripts are provided in `evaluation.py`.
    - You may need to modify the `get_test_sample` function to match your specific task or dataset.
 
 3. **Example: Text-Conditioned Evaluation**
@@ -124,6 +123,7 @@ print(res)
 ```
 
 
+---
 
 Feel free to ask me if you have any questions.
 
