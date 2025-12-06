@@ -9,14 +9,6 @@ Our framework integrates seamlessly with pretrained TRELLIS-based 3D generative 
 
 ---
 
-## TODO Status
-
-* **Main Framework ✔**
-* **Dataset ✔**
-* **Evaluation Code (Coming Soon)**
-
----
-
 ## Dataset
 
 The **validation / test dataset** can be downloaded from:
@@ -84,6 +76,58 @@ run_text_task(pipeline_text, prompt, "results/text/1")
 ```
 
 ---
+
+---
+
+## Evaluation
+
+To evaluate the generated meshes, you need to set up the following environment:
+
+1. **Dependencies**
+   - [MuJoCo](https://mujoco.org/) for physics simulation (if needed for physical metrics)
+   - [Blender](https://www.blender.org/) and `bpy` for mesh rendering and processing
+
+2. **Evaluation Code**
+   - The evaluation scripts are provided in the `evaluation` folder.
+   - You may need to modify the `get_test_sample` function to match your specific task or dataset.
+
+3. **Example: Text-Conditioned Evaluation**
+
+Below is an example of evaluating a text-conditioned mesh:
+
+```python
+
+# Load a test sample for a text prompt
+test_sample = get_test_sample(
+    "./results/text/1", 
+    cond="A big apple.",  # Text prompt as condition
+    trellis_out_path="./results/text/1/final.glb",  # Replace with true trellis result to compute CD/F-score
+    id_=1
+)
+
+# Evaluate mesh using eval_mesh
+res = eval_mesh(
+    test_sample["surface"],
+    input_condition=test_sample["cond"],
+    target=test_sample["target"] if "target" in test_sample else None,
+    inner=test_sample["inner"] if "inner" in test_sample else None,
+    render=0,  
+    device=device,
+    cache_dir=sample_cache_dir,
+    base_id=test_sample["id"],
+    render_mesh=test_sample["texture_mesh"]
+)
+
+print(res)
+# Excepted return format:
+# {'volume': 0.022053713604201896, 'stand': True, 'rotation angle': 12.09500502380615, 'q': array([ 9.94434892e-01, -1.81030881e-03,  3.74934561e-04, -1.05336739e-01]), 'chamfer distance': 0.004543903043337477, 'f score': 0.999549797408834, 'clipscore': 13.835853576660156}
+```
+
+
+
+Feel free to ask me if you have any questions.
+
+
 
 ## Citation
 
