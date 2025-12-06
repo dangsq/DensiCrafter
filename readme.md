@@ -80,8 +80,6 @@ run_text_task(pipeline_text, prompt, "results/text/1")
 
 ## Evaluation
 
-To evaluate the generated meshes, you need to set up the following environment:
-
 1. **Dependencies**
    - [MuJoCo](https://mujoco.org/) for physics simulation 
    - [Blender](https://www.blender.org/) and `bpy` for mesh rendering
