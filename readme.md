@@ -1,17 +1,19 @@
 
 # DensiCrafter: Physically-Constrained Generation and Fabrication of Self-Supporting Hollow Structures
 
+**Shanghai Innovation Institute, Tongji University**
+
 The rapid progress of 3D generative models has enabled automatic synthesis of geometry and texture from multimodal inputs (e.g., text or images). However, most existing methods overlook physical constraints and manufacturability, resulting in designs that are difficult to fabricate or structurally unsound.
 
-**DensiCrafter** addresses this gap by generating lightweight, self-supporting 3D hollow structures through **density-field optimization**. Starting from coarse voxel grids produced by TRELLIS, we reinterpret the grids as a continuous density field and introduce three differentiable, physically constrained, simulation-free loss terms. A mass regularization term penalizes unnecessary material while a restricted optimization domain preserves the object’s exterior geometry.
+**DensiCrafter** addresses this gap by generating lightweight, self-supporting 3D hollow structures through density-field optimization. Starting from coarse voxel grids produced by TRELLIS, we reinterpret the grids as a continuous density field and introduce three differentiable, physically constrained, simulation-free loss terms. A mass regularization term penalizes unnecessary material while a restricted optimization domain preserves the object’s exterior geometry.
 
-Our framework integrates seamlessly with pretrained TRELLIS-based 3D generative models (e.g., TRELLIS, DSO) **without architectural modifications**. Experiments demonstrate up to **43% reduction in material mass** for text-to-3D generation while maintaining high geometric fidelity and improving structural stability. Real-world 3D-printing tests further validate that the produced hollow structures are manufacturable and self-supporting.
+Our framework integrates seamlessly with pretrained TRELLIS-based 3D generative models (e.g., TRELLIS, DSO) without architectural modifications. Experiments demonstrate up to 43% reduction in material mass for text-to-3D generation while maintaining high geometric fidelity and improving structural stability. Real-world 3D-printing tests further validate that the produced hollow structures are manufacturable and self-supporting.
 
 ---
 
 ## Dataset
 
-The **validation / test dataset** can be downloaded from:
+The validation / test dataset can be downloaded from:
 
 🔗 **Baidu Drive:** [https://pan.baidu.com/s/1Wr06oLWo7z7-Ba9h91Zcew?pwd=jtbw](https://pan.baidu.com/s/1Wr06oLWo7z7-Ba9h91Zcew?pwd=jtbw)
 
