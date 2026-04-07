@@ -134,10 +134,13 @@ Feel free to ask me if you have any questions.
 If you find this repository helpful for your research, please consider citing:
 
 ```
-@article{dang2025densicrafter,
+@inproceedings{dang2026densicrafter,
   title={DensiCrafter: Physically-Constrained Generation and Fabrication of Self-Supporting Hollow Structures},
   author={Dang, Shengqi and Chai, Fu and Li, Jiaxin and Yuan, Chao and Ye, Wei and Cao, Nan},
-  journal={arXiv preprint arXiv:2511.09298},
-  year={2025}
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={40},
+  number={1},
+  pages={193--201},
+  year={2026}
 }
 ```
